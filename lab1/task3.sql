@@ -1,3 +1,4 @@
+SET SERVEROUTPUT ON;
 CREATE OR REPLACE FUNCTION CheckEvenOddCount RETURN VARCHAR2 IS
   evenCount NUMBER := 0;
   oddCount NUMBER := 0;
@@ -19,5 +20,10 @@ BEGIN
   END IF;
 END;
 /
+declare
+    res VARCHAR2(255);
+begin
+    res:= CheckEvenOddCount();
+    DBMS_OUTPUT.PUT_LINE(res);
+end;
 
-SELECT CheckEvenOddCount FROM dual;

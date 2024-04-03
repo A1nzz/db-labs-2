@@ -1,5 +1,5 @@
 DECLARE
-  n INTEGER := 10000;
+  n INTEGER := 10;
 BEGIN
   FOR i IN 1..n LOOP
     INSERT INTO MyTable (id, val)
